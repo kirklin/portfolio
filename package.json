@@ -1,0 +1,40 @@
+{
+  "name": "kirklin-portfolio",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@kirklin/logger": "^0.0.2",
+    "@kirklin/reset-css": "^0.0.6",
+    "next": "14.2.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "unocss-preset-chinese": "^0.3.2",
+    "unocss-preset-ease": "^0.0.3"
+  },
+  "devDependencies": {
+    "@eslint-react/eslint-plugin": "^1.5.23",
+    "@kirklin/eslint-config": "^2.5.0",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@unocss/postcss": "latest",
+    "@unocss/webpack": "^0.61.3",
+    "@vercel/analytics": "^1.3.1",
+    "eslint": "^9.6.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.8",
+    "postcss": "^8.4.39",
+    "typescript": "^5.5.3",
+    "unocss": "latest",
+    "vitest": "^2.0.1"
+  }
+}
