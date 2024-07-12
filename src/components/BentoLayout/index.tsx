@@ -63,6 +63,9 @@ export default function BentoLayout({
     ) as unknown as keyof typeof BREAKPOINTS;
     setBreakpoint(newBreakpoint);
   }, []);
+  const handleBreakpointChange = useCallback((newBreakpoint: string) => {
+    setBreakpoint(newBreakpoint as keyof typeof BREAKPOINTS);
+  }, []);
 
   useEffect(() => {
     setMounted(true);
@@ -80,7 +83,7 @@ export default function BentoLayout({
     useCSSTransforms: false,
     measureBeforeMount: false,
     draggableCancel: ".cancel-drag",
-    onBreakpointChange: setBreakpoint,
+    onBreakpointChange: handleBreakpointChange,
     onWidthChange: setWidth,
   };
 
