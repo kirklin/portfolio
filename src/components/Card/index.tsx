@@ -11,7 +11,7 @@ export default function Card({ className, children }: CardProps) {
     <div
       className={cn(
         "h-full cursor-grab select-none overflow-hidden rounded-3xl bg-white active:cursor-grabbing dark:bg-[#0d1117]",
-        "dark:shadow-white dark:shadow-inset",
+        "outline-none dark:ring-2 dark:ring-gray-500/25 dark:focus-within:outline-none dark:focus-within:ring-4 dark:hover:ring-3 dark:hover:ring-gray/15",
         "dark:shadow-sm transition-shadow duration-500 hover:shadow-md",
         className,
       )}

@@ -16,7 +16,7 @@ interface GridLayoutProps extends ReactGridLayoutProps {
 }
 
 const BREAKPOINTS = {
-  xl: 1536,
+  xl: 1368,
   lg: 1280,
   md: 1024,
   sm: 768,
@@ -87,7 +87,7 @@ export default function BentoLayout({
   return (
     <section
       className={cn(
-        "mx-auto max-w-[1536px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px]",
+        "mx-auto max-w-[1368px] max-xl:max-w-[1280px] max-lg:max-w-[1024px] max-md:max-w-[768px] max-sm:max-w-[640px]",
         className,
       )}
     >
@@ -98,7 +98,7 @@ export default function BentoLayout({
           transform: mounted ? "translateY(0)" : "translateY(48px)",
           transition: "opacity 500ms, transform 500ms",
         }}
-        margin={[16, 16]}
+        margin={[20, 20]}
         {...responsiveProps}
       >
         {children}

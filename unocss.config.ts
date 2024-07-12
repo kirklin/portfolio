@@ -6,14 +6,17 @@ import {
   transformerDirectives,
   transformerVariantGroup,
 } from "unocss";
-import presetChinese from "unocss-preset-chinese";
+import presetChinese, { chineseTypography } from "unocss-preset-chinese";
 import presetEase from "unocss-preset-ease";
 
 export default defineConfig({
   presets: [
     presetUno(),
     presetAttributify(),
-    presetChinese(),
+    chineseTypography(),
+    presetChinese({
+      chineseType: "simplified",
+    }),
     presetEase(),
     presetIcons({
       scale: 1.2,

@@ -37,10 +37,10 @@ export const xlLayout: Layout[] = createLayout({
   "experience": { i: "experience", x: 1, y: 1, w: 2, h: 1 },
   "location": { i: "location", x: 3, y: 1, w: 1, h: 1 },
   "projects": { i: "projects", x: 0, y: 2, w: 2, h: 1 },
-  "hackathon-projects": { i: "hackathon-projects", x: 2, y: 2, w: 2, h: 1 },
+  "hackathon-projects": { i: "hackathon-projects", x: 2, y: 2, w: 1, h: 1 },
+  "photography": { i: "photography", x: 3, y: 2, w: 1, h: 1 },
   "blog": { i: "blog", x: 0, y: 3, w: 2, h: 1 },
-  "photography": { i: "photography", x: 2, y: 3, w: 1, h: 1 },
-  "contact": { i: "contact", x: 3, y: 3, w: 1, h: 1 },
+  "contact": { i: "contact", x: 3, y: 3, w: 2, h: 1 },
 });
 
 // 大屏幕布局
@@ -52,10 +52,10 @@ export const lgLayout: Layout[] = createLayout({
   "experience": { i: "experience", x: 1, y: 1, w: 2, h: 1 },
   "location": { i: "location", x: 3, y: 1, w: 1, h: 1 },
   "projects": { i: "projects", x: 0, y: 2, w: 2, h: 1 },
-  "hackathon-projects": { i: "hackathon-projects", x: 2, y: 2, w: 2, h: 1 },
+  "hackathon-projects": { i: "hackathon-projects", x: 2, y: 2, w: 1, h: 1 },
+  "photography": { i: "photography", x: 3, y: 2, w: 1, h: 1 },
   "blog": { i: "blog", x: 0, y: 3, w: 2, h: 1 },
-  "photography": { i: "photography", x: 2, y: 3, w: 1, h: 1 },
-  "contact": { i: "contact", x: 3, y: 3, w: 1, h: 1 },
+  "contact": { i: "contact", x: 3, y: 3, w: 2, h: 1 },
 });
 
 // 中等屏幕布局
