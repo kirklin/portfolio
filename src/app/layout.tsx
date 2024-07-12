@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
 import Analytics from "~/components/Analytics";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { cn } from "~/utils/cn";
+import { ThemeProvider } from "~/app/providers";
+import { inter } from "~/utils/fontts";
 
 export const metadata: Metadata = {
   title: "Boot Next.js App",
@@ -17,9 +17,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <div id="app">{children}</div>
+    <html lang="en" suppressHydrationWarning>
+      <body className={cn(inter.className, "antialiased common-bg")}>
+        <ThemeProvider attribute="class" enableSystem={false}>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

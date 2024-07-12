@@ -16,12 +16,18 @@ export default defineConfig({
     presetChinese(),
     presetEase(),
     presetIcons({
-      scale: 1.5,
+      scale: 1.2,
     }),
   ],
+  theme: {
+    sm: "640px",
+    md: "768px",
+    lg: "1280px",
+    xl: "1536px",
+  },
   shortcuts: {
     // position
-    "common-bg": "bg-gray-100 dark:bg-gray-900",
+    "common-bg": "bg-gray-50 dark:bg-[#090c10]",
     "pr": "relative",
     "pa": "absolute",
     "pf": "fixed",

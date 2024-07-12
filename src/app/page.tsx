@@ -1,9 +1,22 @@
+import BentoLayout from "~/components/BentoLayout";
+import { lgLayout, mdLayout, smLayout } from "~/config/layout";
+import { gridItems } from "~/config/grid-items";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="text-2xl">
-        Hello boot-next
-      </div>
-    </main>
+    <>
+      <main className="py-6">
+        <BentoLayout
+          xlLayout={lgLayout}
+          lgLayout={lgLayout}
+          mdLayout={mdLayout}
+          smLayout={smLayout}
+        >
+          {gridItems.map(item => (
+            <div key={item.i}><item.component /></div>
+          ))}
+        </BentoLayout>
+      </main>
+    </>
   );
 }
