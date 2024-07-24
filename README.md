@@ -19,6 +19,46 @@ Ensure you have the following installed on your development environment:
 - Node.js (LTS version recommended)
 - pnpm
 
+### Environment Setup Guide for Users in China
+
+If you're setting up this project in China, you may encounter issues with downloading packages from the default npm registry. Follow these steps to use a faster mirror and set up the required tools:
+
+#### 1. Install nrm (Node Registry Manager)
+
+nrm is a registry manager for npm, allowing you to easily switch between different npm registries.
+
+```bash
+npm install -g nrm
+```
+
+#### 2. Switch to the Taobao registry
+
+The Taobao registry is a fast mirror of the npm registry for users in China.
+
+```bash
+nrm use taobao
+```
+
+#### 3. Install pnpm
+
+pnpm is the package manager used in this project. Install it globally:
+
+```bash
+npm install -g pnpm
+```
+
+#### 4. Verify the installation
+
+Ensure that pnpm is correctly installed:
+
+```bash
+pnpm --version
+```
+
+#### 5. Continue with project setup
+
+Now that you have the necessary tools installed, you can proceed with the project installation steps outlined in the "Installation" section above.
+
 ### Installation
 
 1. Clone the repository:
