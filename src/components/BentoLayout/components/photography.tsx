@@ -10,6 +10,7 @@ export default function Photography() {
           as={Link}
           className="cancel-drag"
           href="https://github.com/kirklin/"
+          rel="noreferrer noopener"
           target="_blank"
         >
           <svg
