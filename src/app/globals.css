@@ -6,7 +6,6 @@
    ═══════════════════════════════════════════════════ */
 
 @theme inline {
-  /* Reference's exact CSS custom properties */
   --frame-w: 1200px;
   --frame-h: 720px;
   --frame-gap: 40px;
@@ -47,7 +46,6 @@
     width: 100%;
     height: 100%;
     overscroll-behavior: none;
-    /* NO overflow:hidden — ghost div needs to create scrollable area */
   }
 
   /* Hide scrollbars but keep scroll functional */
@@ -70,19 +68,19 @@
   }
 }
 
-/* ═══════════ ROOT CONTAINER ═══════════ */
-/* Root is a normal element — NOT fixed. Ghost div inside creates scrollable area. */
+/* ═══════════════════════════════════════════════════
+   DESKTOP — Horizontal scroll gallery
+   ═══════════════════════════════════════════════════ */
+
 .root {
   position: relative;
 }
 
-/* Ghost div: creates fake scrollable area  */
 .ghost {
   position: absolute;
   pointer-events: none;
 }
 
-/* Center: holds all frames, absolutely positioned */
 .center {
   position: fixed;
   inset: 0;
@@ -92,14 +90,12 @@
   pointer-events: none;
 }
 
-/* Frames container: transforms (scale + translate) */
 .frames {
   position: relative;
   will-change: transform;
   pointer-events: auto;
 }
 
-/* ═══════════ FRAME (white card) ═══════════ */
 .frame {
   position: absolute;
   width: var(--frame-w);
@@ -111,7 +107,6 @@
   overflow: hidden;
 }
 
-/* Frame label above card */
 .frame-label {
   position: absolute;
   top: -28px;
@@ -122,7 +117,6 @@
   white-space: nowrap;
 }
 
-/* Hero clip-reveal: overflow hidden, text slides up */
 .clip-reveal {
   overflow: hidden;
   line-height: 1.15;
@@ -196,4 +190,66 @@
   stroke: var(--color-fg);
   stroke-width: 1.5;
   stroke-linecap: round;
+}
+
+/* ═══════════════════════════════════════════════════
+   MOBILE (≤ 768px) — Vertical card stack
+   Completely different layout from desktop.
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Hide desktop-only UI */
+  .ghost,
+  .cross,
+  .minimap,
+  .minimap-label {
+    display: none !important;
+  }
+
+  /* Root: normal scrollable page */
+  .root {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Center: normal flow, not fixed */
+  .center {
+    position: relative;
+    inset: auto;
+    display: block;
+    pointer-events: auto;
+  }
+
+  /* Frames: vertical stack */
+  .frames {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    transform: none !important;
+  }
+
+  /* Each frame: full width, content-adaptive */
+  .frame {
+    position: relative !important;
+    left: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 100svh;
+    border-radius: 0;
+  }
+
+  /* Frame labels: inside frame, top-left */
+  .frame-label {
+    top: 16px !important;
+    left: 20px !important;
+    z-index: 10;
+    transform: none !important;
+  }
+
+  /* Hero clip-reveal text */
+  .clip-reveal {
+    font-size: 38px !important;
+    line-height: 1.2 !important;
+  }
 }

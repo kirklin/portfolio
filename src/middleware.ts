@@ -1,14 +1,14 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import type { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-  const hostname = request.headers.get('host') || '';
+  const hostname = request.headers.get("host") || "";
 
   // 如果用户访问的是 Cloudflare Pages 的默认域名，永久重定向(301)到自定义主域名
-  if (hostname.includes('.pages.dev')) {
-    url.hostname = 'kirk.hk';
-    url.port = ''; // 确保没有端口号
+  if (hostname.includes(".pages.dev")) {
+    url.hostname = "kirk.hk";
+    url.port = ""; // 确保没有端口号
     return NextResponse.redirect(url, 301);
   }
 
@@ -25,6 +25,6 @@ export const config = {
      * 3. /_static/ (公共静态资源)
      * 4. /favicon.ico, /sitemap.xml (SEO 相关文件)
      */
-    '/((?!api|_next|_static|favicon.ico|sitemap.xml).*)',
+    "/((?!api|_next|_static|favicon.ico|sitemap.xml).*)",
   ],
 };
