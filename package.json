@@ -1,0 +1,35 @@
+{
+  "name": "kirk-init",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@use-gesture/react": "^10.3.1",
+    "framer-motion": "^12.40.0",
+    "gsap": "^3.15.0",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@eslint-react/eslint-plugin": "^5.8.7",
+    "@kirklin/eslint-config": "^8.3.0",
+    "@next/eslint-plugin-next": "^16.2.6",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-plugin-format": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
